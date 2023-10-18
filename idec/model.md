@@ -1,6 +1,6 @@
 
 
-## The oleic acid induction system
+## The oleic acid induction system Model
 
 ### Mechanism
 
@@ -8,7 +8,7 @@ Oleic acid → acyl-CoA A → FadR protein departs from promoter PfadB → gene 
 
 Without oleic acid → FadR protein binds to promoter PfadB → gene expression is inhibited.
 
-<img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20231005003044553.png" alt="image-20231005003044553" style="zoom:80%;" />
+<img src=".\figures\2phenotype.png" alt="2phenotype" style="zoom:80%;" />
 
 From the oleic acid induction mechanism, we can divide the expression of the FadR promoter into the following two scenarios:
 
@@ -71,7 +71,40 @@ $$
 $$
 
 
+
+
+
+### Model Simulation
+
+To validate the feasibility of the above model, we wrote the corresponding model code in Matlab, simulating the continuous introduction of oleic acid (OA). The selection of model parameters was based on data from references [1,2]. We simulated the temporal changes of model variables under the conditions of natural circuits (red curve) and engineered oleic acid inducer circuits (blue curve). In the first subplot, we compared the concentrations between FadR(R) and OA, where the black dashed line represents the activation threshold of the oleic acid inducer. The second subplot compares the relationship between Total FadR and the sequestered complex (C). The third subplot reflects the concentration of acyl-CoA (A) over time.
+
+<img src=".\figures\NAR_fig.png" alt="NAR_fig" style="zoom:75%;" />
+
+
+
+<img src=".\figures\PAR_fig.png" alt="PAR_fig" style="zoom:75%;" />
+
+
+
+From the figures, it can be observed that the introduction of the oleic acid inducer accelerates the decomposition process of OA, causing its concentration to decrease at a faster rate, which also proves the effectiveness of the oleic acid inducer.
+
+
+
 ### Model expansion with additional FadO operators
+
+![fado](.\figures\fado.png)
+
+
+
+By modifying a segment of the FadO operator sequence in the promoter  region, we can alter the oleic acid concentration threshold required to  activate the promoter. Specifically, increasing the FadO operators  raises the threshold of oleic acid needed for acyl-CoA to dissociate  from FadR, allowing the PfadBPfadB promoter to initiate transcription normally. This mechanism sets a  higher bar for oleic acid inducer activation. With this approach,  through quantitative experimentation and mathematical modeling, we can  determine the appropriate induction initiation threshold range, which  aligns with the oleic acid content defined in high-fat diets for various individual physiologies. Consequently, this allows us to design  cholesterol-degrading bacterial strains based on the oleic acid inducer  principle, tailored to fit the gut nutritional environment of different  individuals.
+
+Similarly, we conducted model simulations to verify the feasibility of  the aforementioned operation. Specifically, we utilized an alternative  approach, adjusting the affinity of FadR to inhibit Ep synthesis within our system, to emulate the effects of modifying the FadO operators. A  higher affinity mimics the impact of having additional FadO operators,  necessitating a higher oleic acid concentration to activate the  promoter, and vice versa.
+
+<img src=".\figures\NAR_fig_fado.png" alt="NAR_fig_fado" style="zoom:75%;" />
+
+<img src=".\figures\PAR_fig_fado.png" alt="PAR_fig_fado" style="zoom:75%;" />
+
+In the model simulation graphs, we observe that compared to the original oleic acid inducer, the new version with added FadO operators delays the decomposition rate of OA. At the same time, the threshold at which the oleic acid inducer activates FadR is lower. Given that acyl-CoA (A)  reacts with FadR, this suggests that a higher threshold of oleic acid  decomposition is required to produce acyl-CoA (A). This is consistent  with our theoretical predictions. The results validate that by  increasing the FadO operators, we can precisely control the response  threshold of the oleic acid inducer, making it adaptable for different scenarios.
 
 
 
