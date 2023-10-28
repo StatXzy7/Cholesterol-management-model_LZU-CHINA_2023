@@ -13,21 +13,16 @@ From the oleic acid induction mechanism, we can divide the expression of the Fad
 ![mech](https://github.com/StatXzy7/cholesterol-management-model_LZU-CHINA_2023/blob/main/igem/model/figures/mech.png)	
 
 ​	With oleic acid: $\rightarrow$ acyl-CoA A $\rightarrow$ FadR protein departs from promoter PfadB $\rightarrow$ gene expresses normally, $\beta$-oxidation initiates.
+
 ​	Without oleic acid: $\rightarrow$ FadR protein binds to promoter PfadB $\rightarrow$ gene expression is inhibited.
 
 ## Model Establishment
 
 We establish the ordinary differential equation model for the change rates of FadR(R), FadD (D), acyl-CoA (A), sequestered complex (C), growth-associated enzyme(Eg), and fluorescent protein(F).
-$$
-\begin{aligned}
-\frac{d R}{d t} & =r_{\mathrm{x}, \mathrm{R}}-r_{\mathrm{seq}}-\lambda\left(E_{\mathrm{g}}\right) R \\
-\frac{d D}{d t} & =r_{\mathrm{x}, \mathrm{D}}-\lambda\left(E_{\mathrm{g}}\right) D \\
-\frac{d A}{d t} & =r_{\mathrm{D}}-r_{\mathrm{B}}-2 \cdot r_{\mathrm{seq}}-\lambda\left(E_{\mathrm{g}}\right) A \\
-\frac{d C}{d t} & =r_{\mathrm{seq}}-\lambda\left(E_{\mathrm{g}}\right) C \\
-\frac{d E_{\mathrm{g}}}{d t} & =r_{\mathrm{x}, E_{\mathrm{g}}}-\lambda\left(E_{\mathrm{g}}\right) \cdot E_{\mathrm{g}} \\
-\frac{d F}{d t} & =r_{\mathrm{f}} .
-\end{aligned}
-$$
+
+![mech](https://github.com/StatXzy7/cholesterol-management-model_LZU-CHINA_2023/blob/main/igem/model/figures/model_equation.png)	
+
+
 
 
 ## Model Simulation
