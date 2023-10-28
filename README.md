@@ -10,8 +10,10 @@ Details please refer to our Team [[wiki]](https://2023.igem.wiki/lzu-china/).
 
 From the oleic acid induction mechanism, we can divide the expression of the FadR promoter into the following two scenarios:
 
-![mech](/igem/model/figures/mech.png)	With oleic acid: $\rightarrow$ acyl-CoA A $\rightarrow$ FadR protein departs from promoter PfadB $\rightarrow$ gene expresses normally, $\beta$-oxidation initiates.
-	Without oleic acid: $\rightarrow$ FadR protein binds to promoter PfadB $\rightarrow$ gene expression is inhibited.
+![mech](https://github.com/StatXzy7/cholesterol-management-model_LZU-CHINA_2023/blob/main/igem/model/figures/mech.png)	
+
+​	With oleic acid: $\rightarrow$ acyl-CoA A $\rightarrow$ FadR protein departs from promoter PfadB $\rightarrow$ gene expresses normally, $\beta$-oxidation initiates.
+​	Without oleic acid: $\rightarrow$ FadR protein binds to promoter PfadB $\rightarrow$ gene expression is inhibited.
 
 ## Model Establishment
 
